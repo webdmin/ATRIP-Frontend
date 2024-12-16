@@ -1,0 +1,121 @@
+/* BlogSection.css */
+
+/* General Section Styling */
+.blog-section {
+  padding: 60px 20px;
+  background-color: white;
+  color: #333;
+  text-align: center;
+}
+
+.blog-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  align-items: flex-start;
+  display: flex;
+  left: 200px;
+  position: relative;
+}
+
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid layout for responsive cards */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image covers the area properly */
+  border-radius: 8px;
+}
+
+.blog-post-content {
+  padding: 15px 0;
+}
+
+.blog-post-content h3 {
+  font-size: 1.6rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-post-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #000;
+  border-color: #0056b3;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .blog-section h2 {
+    font-size: 2rem; /* Smaller heading size on mobile */
+    margin-bottom: 20px;
+  }
+
+  .blog-posts {
+    grid-template-columns: 1fr; /* Stack posts on small screens */
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

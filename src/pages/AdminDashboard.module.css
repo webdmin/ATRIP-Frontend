@@ -1,0 +1,294 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+.subscription-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #282c34;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu-item {
+  display: block;
+  padding: 15px;
+  color: white;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background-color: #4caf50;
+}
+
+.profile-bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-image {
+  font-size: 50px;
+  color: #fff;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column;
+}
+
+.header2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-stats,
+.right-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-card {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mini-card h3 {
+  margin-bottom: 10px;
+}
+
+.mini-card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mini-graph {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.pie-chart {
+  width: 100%;
+}
+
+/* Feature Cards */
+.feature-cards-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.feature-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.feature-card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.feature-card-content {
+  padding: 20px;
+}
+
+.feature-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature-card-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.use-tool-btn {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.disabled-button {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container for main content */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between left and right sections */
+}
+
+/* Left Section - Mini Cards */
+.left-section {
+  width: 48%;
+}
+
+.user-data-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-data-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.user-data-card p {
+  font-size: 1.5rem;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Right Section - Graph and Pie Chart */
+.right-section {
+  width: 48%;
+}
+
+.mini-graph, .pie-chart {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.mini-graph h3, .pie-chart h3 {
+  text-align: center;
+  color: #333;
+}
+
+/* Add some responsive design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+  }
+}
+
+.box-container {
+  display: flex; /* This makes the child boxes appear side by side */
+  gap: 20px; /* Optional: Adds space between the boxes */
+}
+
+.left-box, .right-box {
+  flex: 1; /* Makes both boxes take up equal width */
+  padding: 20px;
+  color: white;
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.left-box {
+  background-color: red; /* Red background for left box */
+}
+
+.right-box {
+  background-color: yellow; /* Yellow background for right box */
+  color: black; /* Change text color to black for better contrast */
+}
+
+/* Ensure the main content has padding */
+.header2 {
+  margin-bottom: 20px;
+}
+
+.pricing-info {
+  margin-top: 20px;
+}
+
+.dynamic-content {
+  margin-top: 20px;
+}
