@@ -204,7 +204,7 @@ const plans = [
 
 const Pricing = () => {
   const [planType, setPlanType] = useState("month");
-  const [numUsers, setNumUsers] = useState(1);
+  const [numUsers] = useState(1);
 
   const togglePlanType = (newPlanType) => setPlanType(newPlanType);
 
