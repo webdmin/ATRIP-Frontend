@@ -93,7 +93,7 @@ const ContactSection = () => {
           />
           <div className="image-text">
             <h3>{images[currentImageIndex].text}</h3>
-            <a href={images[currentImageIndex].link} target="_blank"  className="see-details-btn">
+            <a href={images[currentImageIndex].link} target="_blank" rel="noopener noreferrer" className="see-details-btn">
               See Details
             </a>
           </div>
