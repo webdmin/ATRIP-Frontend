@@ -1,0 +1,194 @@
+/* Pricing.css */
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+.header {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Right Side Pricing Toggle */
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.plan-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.bold {
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+/* Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switchInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.sliderBefore {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+.checkedSlider {
+  background-color: #4CAF50;
+}
+
+.checkedSliderBefore {
+  transform: translateX(26px);
+}
+
+/* Plan Styles */
+.plans {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.plan-card {
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.plan-cardHover {
+  transform: scale(1.05);
+}
+
+.planName {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.planPrice {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.planFeatures {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.planFeature {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.planButton {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.planButtonHover {
+  background-color: #45a049;
+}
+
+/* Comparison Table Styles */
+.planComparisonContainer {
+  width: 80%;
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.comparisonTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.comparisonTableHeader {
+  background-color: #3366ff;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparisonTableCell {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.oddRow {
+  background-color: #f9f9f9;
+}
+
+.evenRow {
+  background-color: #f1f1f1;
+}

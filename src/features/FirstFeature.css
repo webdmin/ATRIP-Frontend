@@ -1,0 +1,48 @@
+.map-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 250px;
+  }
+  
+  .map-panel input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .map-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .map-panel button:hover {
+    background-color: #45a049;
+  }
+  
+  .map-container {
+    position: relative; /* Ensure relative positioning for absolute children */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    z-index: 10; /* Ensure it appears above the map */
+    max-width: 300px; /* Set a maximum width */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+  }
+  

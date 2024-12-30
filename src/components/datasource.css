@@ -1,0 +1,46 @@
+/* datasource.css */
+
+.datasource-section {
+    padding:100px 300px 100px 300px;
+    background-color: #01033d;
+    text-align: center;
+}
+
+.datasource-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.datasource-grid {
+    display: flex;
+    flex-wrap: wrap;  /* Allows items to wrap to the next row */
+    justify-content: center;  /* Centers items horizontally */
+    gap: 15px;  /* Space between items */
+}
+
+.datasource-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 30%;  /* Make cards 30% width for 3 items in the first row */
+    text-align: center;
+}
+
+/* Hover effect */
+.datasource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* For the logo image */
+.datasource-logo {
+    width: 60%;
+    max-height: 70px;
+    object-fit: contain;
+}
+

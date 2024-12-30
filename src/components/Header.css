@@ -1,0 +1,260 @@
+/* Header.css */
+
+/* Universal padding to the body */
+body {
+  background-size: cover;
+  /* Ensures the image covers the entire page */
+  background-position: top center;
+  /* Position the image at the top */
+  background-attachment: local;
+  /* Ensures the background stays in place when scrolling */
+  margin: 0;
+  /* Ensure there's no margin that could affect layout */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* General Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 120px;
+  padding-left: 120px;
+  padding-right: 320px;
+  background-size: cover;
+  transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(0, 0, 0);
+  /* Semi-transparent black background */
+}
+
+.header .logo h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  margin-left: 30px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f8a400;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+  color: white;
+}
+
+.nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  /* Important for positioning the dropdown menu */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0066ff;
+  min-width: 220px;
+  z-index: 1;
+  top: 35px;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 20px 20px 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1; /* Make visible */
+  pointer-events: auto; /* Enable click events */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #00258a;
+  color: black;
+  border-radius: 5px;
+
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* SignIn/SignUp Buttons */
+.auth-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  /* Adjust position based on your layout */
+}
+
+.auth-buttons .signin-btn,
+.auth-buttons .signup-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 17px;
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  right: 70px;
+}
+
+.auth-buttons .signin-btn:hover,
+.auth-buttons .signup-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  color: black;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 250px;
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #212121;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav.open ul {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .nav ul li {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .nav ul li a {
+    text-align: left;
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide the SignIn/SignUp buttons on mobile */
+  .auth-buttons {
+    display: none;
+  }
+}
+
+/* Header.css */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 60px;
+  /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px;
+  /* Space between the logo and the text */
+}

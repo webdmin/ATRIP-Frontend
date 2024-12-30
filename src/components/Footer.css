@@ -1,0 +1,237 @@
+/* Demo Banner */
+.demo-banner {
+  background-color: #002080;
+  color: white;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  height: 180px;
+  top: 40px;
+  position: relative;
+}
+
+.demo-content h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.demo-content p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+}
+
+.demo-button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  width: 250px;
+  height: 60px;
+}
+
+.demo-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 40px;
+  font-family: Arial, sans-serif;
+  border-radius: none !important;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-top h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  color: white;
+  position: relative;
+  margin-right: 90px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  margin-right: 400px;
+
+}
+
+.subscription-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  width: 300px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.subscribe-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0 6px 6px 0;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #007bff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 90px;
+  align-items: start;
+  display: flex;
+  margin-left: 50px;
+  top: 55px;
+  position: relative;
+}
+
+.company-name{
+  position: relative;
+  margin-left: 150px;
+  bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+}
+
+.social-icons-02 a {
+  margin: 0 10px;
+  color: white;
+  font-size: 5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  border: none;
+  margin-left: 30px; /* Adds space between icons if there are multiple icons */
+  font-size: 1.5rem; /* Adjust the icon size */
+  color: #0077b5; /* You can change the color of the icon */
+  width: 10px;
+  top: 20px;
+  position: relative;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+.contact-text {
+  margin-right: 20px; 
+  position: relative;
+  margin-right: 150px;
+  top: 70px;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.footer-links {
+  display: flex;
+  flex: 3;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+  display: flex;
+  align-items: start;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.footer-column li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.legal-links {
+  margin-top: 10px;
+}
+
+.legal-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.legal-links a:hover {
+  color: white;
+}
+
+.legal-links span {
+  color: #fff;
+}

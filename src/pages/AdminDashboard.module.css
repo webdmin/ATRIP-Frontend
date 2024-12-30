@@ -1,0 +1,378 @@
+.subscription-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.profile-bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.graphs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.graph-container,
+.pie-chart-container {
+  flex: 1;  /* Both containers will take equal available space */
+  margin-right: 10px;
+}
+
+.pie-chart-container {
+  margin-right: 0; /* Remove margin from the last element */
+}
+
+.graph-container {
+  max-width: 500px;  /* Limit the graph width */
+}
+
+.graph-container h2{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pie-chart-container {
+  max-width: 400px;  /* Limit the pie chart width */
+}
+
+.user-stats {
+  margin-top: 30px;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.user-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 200px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.user-data-table {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-data-table h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 1rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.user-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.user-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.user-table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+.user-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table td:last-child {
+  border-bottom: none;
+}
+
+.user-table td,
+.user-table th {
+  font-size: 16px;
+}
+
+.user-table tr:last-child td {
+  border-bottom: none;
+}
+
+.user-table td:hover {
+  color: #333;
+}
+
+.user-table tr:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it is above other content */
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Content */
+.modal {
+  background-color: white; /* Solid white background for the modal */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow to make it pop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Needed to position close button */
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Close Button (X) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #ff4d4d; /* Change to red on hover */
+}
+
+/* Modal Heading */
+.modal h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form and Input Fields */
+.edit-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+.save-btn, .close-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.close-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.close-btn:hover {
+  background-color: #c82333;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

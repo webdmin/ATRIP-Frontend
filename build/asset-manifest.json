@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.12ae10a8.css",
+    "main.js": "/static/js/main.a4fca65d.js",
+    "static/js/453.072505c9.chunk.js": "/static/js/453.072505c9.chunk.js",
+    "static/media/cyclepath-2.jpg": "/static/media/cyclepath-2.8dcf766a6b0754ab03c9.jpg",
+    "static/media/img-2.webp": "/static/media/img-2.3e73f0b80dd6254e0fc7.webp",
+    "static/media/cyclepath-00.jpg": "/static/media/cyclepath-00.6022055f9f192c63a1de.jpg",
+    "static/media/img-3.jpg": "/static/media/img-3.ebb1f756e77b75cae59b.jpg",
+    "static/media/cyclepath-3.jpg": "/static/media/cyclepath-3.55b983cbbaf64fd638a6.jpg",
+    "static/media/openstreetmap.png": "/static/media/openstreetmap.e1fe152ad0c9df806261.png",
+    "static/media/logo.png": "/static/media/logo.8234b9b0449842bdb2c9.png",
+    "static/media/Leaflet_logo.svg.png": "/static/media/Leaflet_logo.svg.6a06e95a850361029f7a.png",
+    "static/media/img-1.webp": "/static/media/img-1.e46f18056c03d3ffc527.webp",
+    "static/media/overpass.png": "/static/media/overpass.78b434e8e53aaa6b3e3a.png",
+    "index.html": "/index.html",
+    "main.12ae10a8.css.map": "/static/css/main.12ae10a8.css.map",
+    "main.a4fca65d.js.map": "/static/js/main.a4fca65d.js.map",
+    "453.072505c9.chunk.js.map": "/static/js/453.072505c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12ae10a8.css",
+    "static/js/main.a4fca65d.js"
+  ]
+}

@@ -1,0 +1,878 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.subscription-container {
+  display: flex;
+  height: 80vh;
+  background-color: #f4f4f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1a1a2e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  width: 210px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #cee5ff;
+  color: #000000;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.logout-button {
+  padding: 10px;
+  background-color: #4f9af1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Sidebar Bottom User Icon */
+.profile-bottom {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  font-size: 30px;
+  color: #007bff;
+  margin-right: -10px;
+}
+
+.logout-button {
+  background-color: #2c92ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%; /* Full width for the button */
+  max-width: 200px; /* You can adjust the max-width as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #002958; /* Darker shade on hover */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.no-padding {
+  padding: 0 !important;  /* No padding for /chatbot and /map-chatbot pages */
+}
+
+
+.header2 {
+  background-color: #23235e;
+  padding: 30px 40px 20px 50px;
+  position: relative;
+  bottom: 18px;
+  border-radius: 10px;
+  height: 90px;
+}
+
+.header2 h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.header2 p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* New Section - Pricing Description */
+.pricing-description {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pricing-description h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #23235e;
+}
+
+.pricing-description p {
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Plan Toggle */
+.plan-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #444;
+  background: none;
+  color: black;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.toggle-button.active {
+  background-color: #4f9af1;
+  color: #fff;
+  border: none;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  width: 100%;
+  
+}
+
+.switch-container .toggle-button {
+  margin-left: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+/* Plan Cards */
+.plans {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out; 
+}
+
+.plan-card {
+  width: 400px; 
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #444;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 1.5);
+  border-radius: 10px;
+  background-color: #1a1a2e;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 1.75);
+}
+
+.plan-name {
+  font-size: 24px;
+  color: #4f9af1;
+  padding: 10px;
+}
+
+.plan-price {
+  font-size: 24px;
+  margin: 10px 0;
+  color: 333;
+  color: white;
+}
+
+.plan-price-amount {
+  font-size: 32px; /* Larger font size for the amount */
+  font-weight: bold; /* Bold the amount */
+  margin-right: 5px; /* Space between amount and period */
+}
+
+.plan-price-period {
+  font-size: 16px; /* Smaller font size for the period */
+  color: #ffffff;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 20px 20px 30px 40px;
+  text-align: left;
+  margin: 20px 0;
+  font-size: 16px;
+  color: white;
+}
+
+.plan-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4f9af1;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Number of Users */
+.user-selection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-selection label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.user-selection select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #444;
+}
+
+/* Plan Comparison Table */
+.plan-comparison-table {
+  width: 800px;
+  border-collapse: collapse; /* Collapses table borders to remove space between them */
+  border-radius: 5px; /* Adds border-radius to the table */
+  overflow: hidden; /* Ensures borders are rounded */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  position: relative;
+  top: 20px;
+}
+
+/* Style table headers */
+.plan-comparison-table th {
+  background-color: #1a1a2e; /* Light blue background for headers */
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Style table cells */
+.plan-comparison-table td {
+  background-color: #f9f9f9; /* Light gray background for cells */
+  color: #333;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd; /* Adds border between rows */
+}
+
+.plan-comparison-table tr:nth-child(even) td {
+  background-color: #e0f7fa; /* Light blue for even-numbered rows */
+}
+/* Highlight the last row with a different color */
+.plan-comparison-table tr:last-child td {
+  border-bottom: none; /* Removes the last border */
+  background-color: #e0f7fa; /* Light blue background for the last row */
+}
+
+/* Hover effect for rows */
+.plan-comparison-table tr:hover {
+  background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Border for the whole table */
+.plan-comparison-table {
+  border: 1px solid #ddd;
+}
+
+/* Adding some padding and a more readable font */
+.plan-comparison-table th, .plan-comparison-table td {
+  font-family: Arial, sans-serif;
+}
+
+/* FAQ */
+
+.faq{
+  position: relative;
+  top: 60px;
+}
+.faq h2{
+  position: relative;
+  bottom: 10px;
+}
+.faq-item {
+  background-color: #232323;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.faq-item .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  color: #4f9af1;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a2e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.pricing-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-info h2{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+.left-side label {
+  margin-right: 10px;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+/* Style the switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* When the switch is checked, move the slider */
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Labels */
+.plan-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.plan-label.bold {
+  font-weight: bold;
+  color: #007bff; /* Optional: You can change the color for bold text */
+}
+
+.billed-annually {
+  font-size: 12px;  
+  color: #007bff;
+}
+
+.billed-monthly {
+  font-size: 12px;
+  color: #333;
+}
+
+.plans-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.centered-purchase-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.purchase-button {
+  padding: 12px 30px; /* Increased padding for better spacing */
+  font-size: 18px; /* Increased font size for emphasis */
+  cursor: pointer;
+  margin-top: 0px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 12px; /* Slightly more rounded corners */
+  border: none; /* Fix border style */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.purchase-button:hover {
+  background-color: #1a1a2e;
+  color: white;
+  transform: scale(1.05); /* Slightly increase size on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow effect */
+}
+
+.purchase-button:active {
+  background-color: #33334d; /* Darker shade on click */
+  transform: scale(1); /* Reset the scaling on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
+}
+
+.purchase-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue glow outline on focus */
+}
+
+.pricing-info{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.plan-comparison-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center horizontally */
+  justify-content: center;  /* Center vertically */
+  top: 50px;
+  position: relative;
+  font-size: 20px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.feature-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-image {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-card-image img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.feature-card-content {
+  padding: 20px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.feature-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.feature-card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.use-tool-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.use-tool-btn:hover {
+  background-color: #0056b3;
+}
+
+.explore-now-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.explore-now-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.explore-now-btn:hover {
+  background-color: #218838;
+}
+
+
+/* Style for the disabled card */
+.disabled-card {
+  background-color: #d3d3d3;
+  opacity: 0.6;
+  position: relative; /* Required for the tooltip */
+  pointer-events: auto; /* Allow hover but still prevent clicks */
+  cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+/* Prevent clicking while still allowing hover */
+.disabled-card button {
+  pointer-events: none;
+}
+
+/* Hover effect for disabled cards */
+.disabled-card:hover {
+  background-color: #e0e0e0; /* Slightly lighter gray on hover */
+}
+
+/* Tooltip for disabled cards */
+.disabled-card:hover::after {
+  content: "Upgrade to premium to access this feature";
+  position: absolute;
+  top: -35px; /* Adjust to position the tooltip above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Triangle below the tooltip */
+.disabled-card:hover::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Adjust to position the triangle below the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+  z-index: 10;
+}
+
+/* The blurred background */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blurring the background */
+  z-index: 999; /* Ensure it sits on top of other content */
+}
+
+/* Main popup container */
+.logout-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the popup */
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it sits on top of the backdrop */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Fade-in transition */
+  animation: fadeIn 0.5s forwards; /* Animation for fade-in effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add a semi-transparent backdrop */
+.logout-popup:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255); /* Backdrop with slight transparency */
+  z-index: -1;
+  border-radius: 20px;
+}
+
+/* Popup heading */
+.popup-content h3 {
+  margin: 0;
+  font-size: 22px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: #000000; /* A green color for success message */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add some padding and make it look interactive */
+.popup-content h3:hover {
+  transform: scale(1.1); /* Hover effect for the heading */
+}
+
+/* Optional: Close button style */
+.popup-close-btn {
+  margin-top: 15px;
+  padding: 8px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #000000; /* A bright red color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Close button hover effect */
+.popup-close-btn:hover {
+  background-color: #e84e2b; /* Darker red when hovered */
+}
+
+/* Add animation to the close button */
+.popup-close-btn:focus {
+  outline: none;
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.help-form {
+  margin: 20px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+#helpQuery {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+/* Send Query Button Styles */
+.send-query-button {
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+/* Documentation Section */
+.documentation-section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.documentation-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.documentation-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Form container */
+.form-container {
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+    text-align: left;
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Slideshow */
+.image-slideshow {
+    display: inline-block;
+    width: 45%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.image-slideshow img:first-child {
+    display: block;
+}
